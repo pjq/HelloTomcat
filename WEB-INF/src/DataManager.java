@@ -37,7 +37,7 @@ public class DataManager {
 	}
 
 	public Connection getConnection() {
-		String url = "jdbc:mysql://localhost:3306/mysql";
+		String url = "jdbc:mysql://localhost:3306/mydb";
 		String username = "root";
 		String password = "mysql";
 

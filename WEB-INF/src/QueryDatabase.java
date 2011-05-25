@@ -23,7 +23,7 @@ public class QueryDatabase extends HttpServlet {
 		DataManager dataManager = DataManager.getInstance();
 		Connection connection = dataManager.getConnection();
 
-		String sqlString = "SELECT *  from db";
+		String sqlString = "SELECT *  from account";
 		try {
 			Statement statement = connection.createStatement();
 			ResultSet resultSet = statement.executeQuery(sqlString);
@@ -49,9 +49,9 @@ public class QueryDatabase extends HttpServlet {
 				out.println('\n');
 				for (String v : columnHeads) {
 					String val = resultSet.getString(v);
-					out.print(val + " ");
+					out.print(v+"="+val + " ");
 				}
-				out.println('\n');
+				//out.println('\n');
 
 			} while (resultSet.next());
 
